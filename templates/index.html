@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Artículos</title>
+</head>
+<body>
+    <h1>Lista de Artículos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Contenido</th>
+                <th>Categoría</th>
+                <th>Fecha de Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for articulo in articulos %}
+                <tr>
+                    <td>{{ articulo.id }}</td>
+                    <td>{{ articulo.titulo }}</td>
+                    <td>{{ articulo.autor }}</td>
+                    <td>{{ articulo.contenido }}</td>
+                    <td>{{ articulo.categoria }}</td>
+                    <td>{{ articulo.creado }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
